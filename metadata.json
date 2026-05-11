@@ -1,0 +1,6 @@
+{
+  "name": "Vagayil Holydays Vagamon",
+  "description": "A full-stack multilingual homestay management platform for Vagayil Holydays, Vagamon. Features Google Sign-in reviews, admin controls for bio, phone, map, and room vacancy, nearby tourist spots, and dark mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

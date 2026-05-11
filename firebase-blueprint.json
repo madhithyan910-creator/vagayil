@@ -1,0 +1,98 @@
+{
+  "entities": {
+    "Room": {
+      "title": "Room",
+      "description": "A room in Vagayil Holydays",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["room", "cottage"] },
+        "pricePerNight": { "type": "number" },
+        "description": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "amenities": { "type": "array", "items": { "type": "string" } },
+        "availabilityStatus": { "type": "string", "enum": ["available", "unavailable"] }
+      },
+      "required": ["title", "type", "pricePerNight", "availabilityStatus"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "A guest reservation",
+      "type": "object",
+      "properties": {
+        "guestName": { "type": "string" },
+        "phone": { "type": "string" },
+        "email": { "type": "string" },
+        "checkIn": { "type": "string", "format": "date-time" },
+        "checkOut": { "type": "string", "format": "date-time" },
+        "guestsCount": { "type": "number" },
+        "roomId": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "cancelled"] },
+        "totalPrice": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["guestName", "phone", "checkIn", "checkOut", "roomId", "status"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "User review of the homestay",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userPhoto": { "type": "string" },
+        "rating": { "type": "number" },
+        "comment": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "rating", "comment", "createdAt"]
+    },
+    "TouristSpot": {
+      "title": "TouristSpot",
+      "description": "Nearby place to visit",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "searchKeyword": { "type": "string" }
+      },
+      "required": ["name", "image"]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Global homestay settings",
+      "type": "object",
+      "properties": {
+        "phone": { "type": "string" },
+        "bio": { "type": "string" },
+        "mapLink": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "guestLimit": { "type": "number" }
+      },
+      "required": ["phone", "bio", "mapLink"]
+    }
+  },
+  "firestore": {
+    "rooms": {
+      "schema": "Room",
+      "description": "Collection of rooms"
+    },
+    "bookings": {
+      "schema": "Booking",
+      "description": "Collection of reservations"
+    },
+    "reviews": {
+      "schema": "Review",
+      "description": "Collection of user reviews"
+    },
+    "touristSpots": {
+      "schema": "TouristSpot",
+      "description": "Collection of nearby spots"
+    },
+    "settings": {
+      "schema": "SiteSettings",
+      "description": "Global configuration document"
+    }
+  }
+}

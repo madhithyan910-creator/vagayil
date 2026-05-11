@@ -1,0 +1,11 @@
+{
+  "id": "main",
+  "phone": "+91 9876543210",
+  "bio": "Vagayil Holydays offers a serene escape in the heart of Vagamon's lush greenery. Experience nature like never before.",
+  "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31481.54519961633!2d76.885664!3d9.691234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07b5007a5ffc0d%3A0x7a79a2209b337680!2sVagayil%20Holydays!5e0!3m2!1sen!2sin!4v1715410000000!5m2!1sen!2sin",
+  "images": [
+    "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+  ],
+  "guestLimit": 30
+}
