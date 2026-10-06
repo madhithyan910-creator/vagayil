@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeProvider, useTheme } from "next-themes";
 import { auth, signInWithGoogle, logout } from "@/lib/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 declare global {
   interface Window {
@@ -223,6 +224,7 @@ export default function App() {
           </main>
           <Footer />
           <Toaster position="top-center" richColors />
+          <SpeedInsights />
         </div>
       </Router>
     </ThemeProvider>
