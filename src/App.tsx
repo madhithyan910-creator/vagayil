@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 import LandingPage from "@/pages/Home";
 import Rooms from "@/pages/Rooms";
 import Booking from "@/pages/Booking";
@@ -225,6 +226,7 @@ export default function App() {
           <Toaster position="top-center" richColors />
         </div>
       </Router>
+      <Analytics />
     </ThemeProvider>
   );
 }
